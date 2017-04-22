@@ -1,0 +1,48 @@
+extends ../_template
+
+block variables
+  - var title = 'About'
+
+block content
+    .wrapper
+        section.section.hero
+            include ../common/_section-top
+            
+        section.section.about
+            .about__left
+                svg.triangle.triangle_fill_white
+                .title.about__section-title
+                    | Обо мне
+                .user-about__picture
+                .user-about__title
+                    .subtitle 
+                        | Кто я
+                .user-about__text
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .about__right
+                svg.triangle.triangle_fill_beige
+                    
+                    .about-data
+                        .about-data__desc.about-user-info
+                            .about-data-info__title
+                                .subtitle Чем я могу быть вам полезен
+                            .about-user-info__text
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        .about-data__content
+                            ul.skills
+                                each skill in skills
+                                    each skillsArray, skillName in skill
+                                        li.skills__item
+                                            .skill-section
+                                                .skill-section__title= skillName
+                                                ul.skill-section__list
+                                                    each skillTitle in skillsArray
+                                                        li.skill-section__item
+                                                            .skill
+                                                                svg.skill__circle
+                                                                    .skill__name=  skillTitle
+        section.section.map
+            
+    block footer
+        include ../common/_footer
