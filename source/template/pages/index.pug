@@ -18,7 +18,7 @@ block content
                 .title
                     | Авторизуйтесь
                 .logon-input
-                    input(type="text" name="name" placeholder="Логин").logon__input.inputs
+                    input(type="text" name="user" placeholder="Логин").logon__input.inputs
                     input(type="password" name="password" placeholder="Пароль").logon__input.inputs
                 .logon-radio
                     input(type="checkbox").checkbox
@@ -26,10 +26,12 @@ block content
                     .question
                         | Вы точно не робот?
                     input(type="radio" name="robot").radio
+                    span.radio__title Да
                     input(type="radio" name="robot").radio
+                    span.radio__title Не уверен
                 .logon-btn
-                    input(type="button" value="На главную").button
-                    input(type="button" value="Войти").button
+                    button(type="button" value="На главную").button
+                    button(type="button" value="Войти").button
     .copyright
         | &copy; Шелгунов Александр | Создано с любовью в Loftscool | 2017
         
