@@ -1,0 +1,88 @@
+extends ../_template
+
+block variables
+    - var title = 'Home page'
+
+block content
+    .wrapper
+        section.section.hero
+            include ../common/_section-top
+                
+        section.section.portfolio
+            .title.portfolio__section-title
+                | Мои работы
+            .portfolio__preview-container
+                img.portfolio__preview-img.active(src="" alt="")
+                img.portfolio__preview-img.active(src="" alt="")
+                img.portfolio__preview-img.active(src="" alt="")
+
+            .portfolio__project-container
+                .portfolio-projects
+                    .project.active
+                        .project__inner
+                            .subtitle.project__title Сайт 1
+                            p.portfolio__technologies HTML, CSS, JavaScrypt
+                            button.project__link Посмотреть сайт
+                                span.fa.fa-link
+                    .project
+                        .project__inner
+                            .subtitle.project__title Сайт 2
+                            p.portfolio__technologies HTML, CSS, JavaScrypt
+                            button.project__link Посмотреть сайт
+                                span.fa.fa-link
+                    .project
+                        .project__inner
+                            .subtitle.project__title Сайт 3
+                            p.portfolio__technologies HTML, CSS, JavaScrypt
+                            button.project__link Посмотреть сайт
+                                span.fa.fa-link
+                                    
+            .portfolio__navigation-container
+                .navigation-box.navigation-box_prev
+                    button.portfolio-button.portfolio-button_prev
+                        span.fa.fa-chevron-down
+                            
+                    .portfolio-thumbnails
+                        .portfolio-thumbnails__thumbnail
+                            img(src="", alt="")
+                        .portfolio-thumbnails__thumbnail
+                            img(src="", alt="")
+                        .portfolio-thumbnails__thumbnail
+                            img(src="", alt="")        
+                            
+                .navigation-box.navigation-box_prev
+                    button.portfolio-button.portfolio-button_prev
+                        span.fa.fa-chevron-up
+                            
+                    .portfolio-thumbnails
+                        .portfolio-thumbnails__thumbnail
+                            img(src="", alt="")
+                        .portfolio-thumbnails__thumbnail
+                            img(src="", alt="")
+                        .portfolio-thumbnails__thumbnail
+                            img(src="", alt="")
+                
+        section.section.review
+            .title.works__section-reviews
+                | Что обо мне говорят
+            ul.reviews__list
+                li.reviews__item
+                    .reviews__text
+                    .rev-user
+                        img.rev-user__avatar
+                        span.rev-user__name
+                            
+            .form__container
+                form.form
+                    .form__bg
+                    .form_content
+                        .title.reviews__section-title Связаться со мной
+                        input(type="text" name="name" placeholder="Имя").input
+                        input(type="email" name="email" placeholder="Email").input
+                        textarea(name="mail" placeholder="Ваше сообщение").input
+                    
+                        input(type="submit" value="Отправить")
+                        input(type="reset" value="Очистить")
+            svg.triangle.triangle_fill_beige
+    block footer
+        include ../common/_footer
