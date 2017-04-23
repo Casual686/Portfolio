@@ -42,6 +42,26 @@ block content
                                                                 svg.skill__circle
                                                                     .skill__name=  skillTitle
         section.section.map
+            .map__map
+            .contacts
+                .title.contacts_title Контакты
+                ul.contacts__list
+                    li.contacts__item
+                        a(href="skype:shell686?call").contacts__link
+                            i.fa.fa-skype
+                            | shell686
+                    li.contacts__item
+                        a(href="mailto:casual686@gmail.com").contacts__link
+                            i.fa.fa-envelope
+                            | Casual686@gmail.com
+                    li.contacts__item
+                        a(href="skype:+7985886-64-96?call").contacts__link
+                            i.fa.fa-phone
+                            | +7 (985) 886-64-96
+                    li.contacts__item
+                        a(href="#").contacts__link
+                            i.fa.fa-map-marker
+                            | г. Москва
             
     block footer
         include ../common/_footer
