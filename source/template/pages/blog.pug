@@ -1,0 +1,61 @@
+extends ../_template
+
+block variables
+    - var title = 'Blog'
+
+block content
+    -var articleTitle = {'#article-1' : 'Самое важное в SASS', '#article-2' : 'Прием в Верстке без которых не обходится ни один сайт', '#article-3' : 'Самый необходимый набор Gulp плагинов', '#article-4' : 'Самые необходимые команды Git'}
+        section.section.hero
+            .hero__bg
+                img(src="img/bg/portfolio.jpg" alt="").hero__bg-img
+                
+            .hero__container
+                .user
+                    .user__pic-container
+                        img(src="img/avatars/me1.jpg" alt="").user__pic
+                    .user__name Шелгунов Александр
+                    .user__desc Личный сайт разработчика
+                    
+                .title.blog-head_title
+                    svg.blog-head__pic
+                        use(xlink:href="img/icons/icon/blog_header0.svg#blog-head")
+                    | Блог     
+            
+        section.section.blog-head 
+            svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.blog-head__fill.triangle_left
+                polygon(points="0,0 0,110 1000, 110")
+            svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.blog-head__fill.triangle_right
+                polygon(points="0,110 1000,110 1000,0")
+                        
+        section.section.blog
+            aside.aside-nav
+                ul.aside-nav__list
+                    each art_title, art_link in articleTitle
+                        li.nav-menu__item
+                            a(href=`${art_link}`).nav-menu__link= art_title
+                            
+            .blog-content
+                article.article#article-1
+                    .article__title Самое важное в SASS
+                    p.article__date 25.05.2017
+                    .article__content.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .blog-content
+                article.article#article-2
+                    .article__title Прием в Верстке без которых не обходится ни один сайт
+                    p.article__date 25.05.2017
+                    .article__content.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .blog-content
+                article.article#article-3
+                    .article__title Самый необходимый набор Gulp плагинов
+                    p.article__date 25.05.2017
+                    .article__content.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        block footer
+            include ../common/_footer
+            

@@ -1,0 +1,52 @@
+.works-head,
+.about-head,
+.blog-head {
+	position: relative;
+}
+
+.works-head {
+    background: $light-beige;
+    text-align: center;
+}
+
+.triangle_position {
+	position: absolute;
+	bottom: 100%;
+	width: 50%;
+	height: 110px;
+}
+.works-head__fill {
+    fill: $light-beige;
+}
+.blog-head__fill {
+    fill: #ffffff;
+}
+
+
+.triangle_left {
+	left: 0;
+}
+
+.triangle_right {
+	right: 0;
+}
+
+
+
+
+.triangle {
+  height: 100px;
+  width: 100%;
+
+  &_fill {
+
+    &_white {
+      fill: $white;
+    }
+
+    &_beige {
+      fill: $beige;
+    }
+
+  }
+}

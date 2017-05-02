@@ -1,0 +1,57 @@
+.reviews__list {
+    display: flex;
+    justify-content: center;
+}
+
+.reviews__item {
+    position: relative;
+    width: 370px;
+    margin-right: 30px;
+}
+
+.blockquote {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    font-size: 40px;
+    color: rgba($main--darken, .2);
+}
+
+.reviews__text {
+    margin-bottom: 25px;
+    color: $main--dark;
+}
+
+.rev-user {
+    display: flex;
+    align-items: center;
+}
+
+.rev-user__avatar {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+    margin-right: 20px;
+}
+
+.rev-user__avatar__pic {
+	display: block;
+	max-width: 100%;
+}
+
+.rev-user__name p{
+    &:first-child {
+        font-family: 'roboto';
+        font-weight: 600;
+        color: #20b5a1;
+    }
+    &:last-child {
+        font-family: 'roboto';
+        font-weight: 400;
+        color: #20b5a1;
+    }
+}

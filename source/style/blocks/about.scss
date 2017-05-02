@@ -1,0 +1,49 @@
+.about {
+    @extend %clearfix;
+}
+
+.about__left, .about__right {
+    float: left;
+    width: 50%;
+    position: relative;
+    height: 100vh;
+}
+
+.about__left {
+    background: $white;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.user-about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.about__section-title {
+    flex: 1;
+}
+
+.user-about__text p{
+    margin-bottom: 20px;
+}
+
+.about__right {
+    background: $beige;
+}
+
+.about__triangles {
+    position: absolute;
+    bottom: 100%;
+}
+
+.about-data {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 60px;
+}

@@ -1,0 +1,7 @@
+.social
+    ul.social_list
+        each item in ['vk', 'gh', 'in']
+            li.social__item
+                a(href="#" class=`social__link social__link_${item}`)
+                    svg.sicial__icon
+                        use(xlink:href=`/img/icons/sprite/sprite-sicial-round.svg#${item}`)

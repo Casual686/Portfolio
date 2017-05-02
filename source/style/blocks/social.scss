@@ -1,0 +1,21 @@
+.social {
+    margin-left: auto;
+    margin-right: 30px;
+}
+.social_list {
+    display: inline-flex;
+}
+
+.social__item {
+    margin-left: 10px;
+}
+
+.sicial__icon {
+    height: 36px;
+    width: 36px;
+    fill: rgba(#ffffff, .5);
+
+    &:hover {
+        fill: rgba(#ffffff, 1);
+    }
+}

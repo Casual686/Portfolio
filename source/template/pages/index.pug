@@ -1,7 +1,37 @@
 extends ../_template
 
 block variables
-  - var title = 'Home page'
+    - var title = 'Home page'
 
 block content
-  include ../common/_greating
+    a(href="#" alt="").autorization Авторизоваться
+    .flip-container
+        .flipper
+            include ../common/_autor-block
+                include ../common/_social
+                nav.navigation.navigation_welcome
+                    ul.nav-menu
+                        each text in ['Мои работы', 'Обо мне', 'Блог']
+                            li.nav-menu__item
+                                a(href="#").menu__link= text
+            .autorization
+                .subtitle
+                    | Авторизуйтесь
+                .logon-input
+                    input(type="text" name="user" placeholder="Логин").logon__input.inputs
+                    input(type="password" name="password" placeholder="Пароль").logon__input.inputs
+                .logon-radio
+                    input(type="checkbox").checkbox
+                    span.check-title Я человек
+                    .question
+                        | Вы точно не робот?
+                    input(type="radio" name="robot").radio
+                    span.radio__title Да
+                    input(type="radio" name="robot").radio
+                    span.radio__title Не уверен
+                .logon-btn
+                    button(type="button").button На главную
+                    button(type="button").button Войти
+    .copyright
+        | &copy; Шелгунов Александр | Создано с любовью в Loftscool | 2017
+        

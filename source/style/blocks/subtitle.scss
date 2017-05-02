@@ -1,0 +1,34 @@
+.subtitle {
+    color: $main--dark;
+    font-size: 35px;
+    font-family: 'bernier_regularregular';
+    padding: 0 3.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+  &:after, &:before {
+    content: "";
+    display: block;
+    background: rgba($main-font-color, .2);
+    width: 22px;
+    height: 5px;
+  }
+
+  &:after {
+    margin-left: 40px;
+  }
+
+  &:before {
+    margin-right: 40px;
+  }
+
+  @include phones() {
+    &:after, &:before {
+      display: none;
+    }
+  }
+}

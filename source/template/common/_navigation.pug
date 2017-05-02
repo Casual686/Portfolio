@@ -1,0 +1,5 @@
+nav.navigation.navigation_footer
+    ul.nav-menu
+        each text, link in {'works.html' : 'Мои работы', 'about.html' : 'Обо мне', 'blog.html' : 'Блог', 'autorization.html' : 'Авторизация'}
+            li.nav-menu__item
+                a(href=link).menu__link= text

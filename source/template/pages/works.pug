@@ -1,0 +1,73 @@
+extends ../_template
+
+block variables
+    - var title = 'Мои Работы'
+
+block content
+    include ../common/_user
+    section.section.works-head
+        svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.works-head__fill.triangle_left
+            polygon(points="0,0 0,110 1000, 110")
+        svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.works-head__fill.triangle_right
+            polygon(points="0,110 1000,110 1000,0")   
+        .title.portfolio__section-title
+            svg.works-head__pic
+                use(xlink:href="img/icons/icon/works_header.svg#works-head")
+            | Мои работы     
+    
+    section.section.slider
+        .slider__desc
+            .slider__desc-info
+                .slider__desc-title
+                    .block-title Сайт школы онлайн образования
+                .slider__desc-skills
+                    | HTML, CSS, JavaScript
+                .slider__desc-btn
+                    a(href="#").btn Посмотреть сайт
+        .slider__display
+            img(src="img/works/work1.png" alt="").slider__display-pic
+        .slider__btns
+            a(href="#").slider__btn.slider__btn_left
+            a(href="#").slider__btn.slider__btn_right
+            
+    section.section.reviews
+        .title.works__section-reviews
+            | Что обо мне говорят
+        ul.reviews__list
+            li.reviews__item
+                .blockquote
+                    i(aria-hidden="true").fa.fa-quote-left
+                .reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .rev-user
+                    .rev-user__avatar
+                        img(src="img/avatars/Dima.jpg").rev-user__avatar_pic
+                    .rev-user__name 
+                        p Ковальчук Дмитрий
+                        p Основатель Loftschool
+            li.reviews__item
+                .blockquote
+                    i(aria-hidden="true").fa.fa-quote-left
+                .reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .rev-user
+                    .rev-user__avatar
+                        img(src="img/avatars/Vova.jpg").rev-user__avatar_pic
+                    .rev-user__name
+                        p Сабанцев Владимир
+                        p Преподаватель             
+        .form__container
+            form.form
+                .form__bg
+                .form_content
+                    .block-title.reviews__section-title Связаться со мной
+
+                    input(type="text" name="name" placeholder="Имя").input
+
+                    input(type="email" name="email" placeholder="Email").input
+
+                    textarea(name="mail" placeholder="Ваше сообщение").input.input-area
+                .form-buttons
+                    input(type="submit" value="Отправить").form-btn.form-btn_left
+                    input(type="reset" value="Очистить").form-btn.form-btn.right
+        svg.triangle.triangle_fill_beige
+    block footer
+        include ../common/_footer
