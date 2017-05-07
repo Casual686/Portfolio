@@ -1,0 +1,23 @@
+.head-line
+    .sicial
+        ul.social__list
+            each item in ['vk', 'github', 'in']
+                li.social__item
+                    a(href="#" class=`social__link .social__link_${item}`)
+                        svg.social__icon
+                            use(xlink:href=`/img/icons/sprite/sprite-socials.svg#${item}`)
+    .hamburger#hamburger
+        span.line
+        span.line
+        span.line
+    .overlay#overlay
+        nav.overlay-menu
+            ul.overlay-menu__list
+                li.overlay-menu__item
+                    a(href="works.html") Мои работы
+                li.overlay-menu__item
+                    a(href="about.html") Обо мне
+                li.overlay-menu__item
+                    a(href="blog.html") Блог
+                li.overlay-menu__item
+                    a(href="autorization.html") Авторизация

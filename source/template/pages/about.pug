@@ -5,22 +5,20 @@ block variables
 
 block content
     section.section.hero
+        block head-line
+            include ../common/_header-line
         .hero__bg
             img(src="img/bg/portfolio.jpg").hero__bg-img
-        block socials
-            include  ../common/_social     
-            
+ 
+        .hero__container
+            .user
+                .user__pic-container
+                    img(src="img/avatars/me1.jpg" alt="").user__pic
+                .user__name Шелгунов Александр
+                .user__desc Личный сайт разработчика
+                    
         a(href="#").page-down
             img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
-        
-        .hero__title
-            img(src="img/icons/icon/portfolio_header.svg", alt="").section-title
-            .user.hero__user-block
-                .user__photo
-                    .user__photo-avatar
-                        img(src="img/avatars/me2.jpg", alt="").user__photo-img
-                .user__name Шелгунов Александр
-                .user__desc Личный сайт веб разработчика
                     
     section.section.about
         .about__left

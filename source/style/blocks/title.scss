@@ -2,7 +2,7 @@
     color: $main-font-color;
     font-size: 63px;
     font-family: 'bernier_regularregular';
-    padding: 2.8125rem 5rem;
+    padding: 2.8125rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,11 +19,11 @@
   }
 
   &:after {
-    margin-left: 40px;
+    margin-left: 20px;
   }
 
   &:before {
-    margin-right: 40px;
+    margin-right: 20px;
   }
 
   @include phones() {
@@ -31,4 +31,10 @@
       display: none;
     }
   }
+}
+
+#white {
+    &:after, &:before {
+      background: rgba(#fff, .2);
+    }
 }

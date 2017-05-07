@@ -4,7 +4,14 @@ block variables
     - var title = 'Мои Работы'
 
 block content
-    include ../common/_user
+    section.section.hero
+        block head-line
+            include ../common/_header-line
+        include ../common/_user
+
+        a(href="#").page-down
+            img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
+
     section.section.works-head
         svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.works-head__fill.triangle_left
             polygon(points="0,0 0,110 1000, 110")
@@ -14,7 +21,8 @@ block content
             svg.works-head__pic
                 use(xlink:href="img/icons/icon/works_header.svg#works-head")
             | Мои работы     
-    
+        a(href="#").page-down
+            img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
     section.section.slider
         .slider__desc
             .slider__desc-info
