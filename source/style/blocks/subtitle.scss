@@ -1,33 +1,36 @@
 .subtitle {
+    font-size: 2.1875rem;
     color: $main--dark;
-    font-size: 35px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
     font-family: 'bernier_regularregular';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
+    max-width: 14.375rem;
+    text-align: center;
+    margin-left: 2.8125rem;
+    margin-right: 2.8125rem;
+    margin-bottom: 2.5rem;
 
-  &:after, &:before {
-    content: "";
-    display: block;
-    background: rgba($main-font-color, .2);
-    width: 22px;
-    height: 5px;
-  }
-
-  &:after {
-    margin-left: 40px;
-  }
-
-  &:before {
-    margin-right: 40px;
-  }
-
-  @include phones() {
-    &:after, &:before {
-      display: none;
+    &::after,
+    &::before {
+        content: "";
+        width: 22px;
+        height: 5px;
+        opacity: 0.2;
+        background-color: rgba($main-font-color, .2);
+        top: 1.3125rem;
+        display: block;
+        position: absolute;
     }
-  }
+
+    &::before {
+        left: -2.625rem;
+    }
+    &::after {
+        right: -2.625rem;
+    }
+
+    @include tablets() {
+        max-width: 90%;
+    }
 }

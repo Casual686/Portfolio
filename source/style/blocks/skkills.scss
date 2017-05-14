@@ -1,6 +1,10 @@
 .skills {
     display: flex;
     flex-direction: column;
+
+    &:last-child {
+        margin-bottom: 65px;
+    }
 }
 
 .skill-section__title {
@@ -8,16 +12,34 @@
     font-weight: 500;
     font-size: 28px;
     color: $main--dark;
-    margin: 40px 0 20px 0;
+    margin: 32px 0 12px 0;
+
+    @include tablets() {
+        text-align: center;
+    }
 }
 
 .skill-section__list {
     display: flex;
+    justify-content: space-between;
+
+    @include tablets() {
+        justify-content: space-around;
+    }
+
+    @include phones() {
+        flex-wrap: wrap;
+    }
 }
 
 .skill-section__item {
     width: 120px;
     height: 120px;
+
+    @include laptop() {
+        width: 110px;
+        height: 110px;
+      }
 }
 
 .skill__circle {
@@ -34,14 +56,15 @@
   stroke-dasharray: .0010 282.6;
   transition: all 1s;
 }
-.skill-section__item {
-    margin-left: 40px;
-}
 
 
 .skill {
     position: relative;
     height: 120px;
+
+    @include laptop() {
+        height: 110px;
+      }
 }
 
 .skill__name {
@@ -53,4 +76,5 @@
     font-weight: 500;
     font-size: 14px;
     color: $main--lighten;
+    text-align: center;
 }

@@ -3,3 +3,7 @@
   @include centered(x);
   z-index: 4;
 }
+
+.go-up-icon {
+    transform: rotate(180deg);
+}

@@ -21,30 +21,29 @@ block content
             img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
                     
     section.section.about
+        svg(
+            viewbox="0 0 1000 100" 
+            preserveAspectRatio="none"
+            class="triangle triangle_fill_white about__triangles")
+            polygon(points="0,0 0,100 1000,100")
+        svg(
+          viewbox="0 0 1000 100" 
+          preserveAspectRatio="none"
+          class="triangle triangle_fill_beige about__triangles")
+          polygon(points="0,100 1000,100 1000,0")
+              
         .about__left
-            svg(
-                viewbox="0 0 1000 100" 
-                preserveAspectRatio="none"
-                class="triangle triangle_fill_white about__triangles")
-                polygon(points="0,0 0,100 1000,100")
-
             .title.about__section-title
                 | Обо мне
             .user-about
                 .user-about__picture
-                    img(src="img/avatars/me1.jpg", alt="")
+                    img(src="img/avatars/me1.jpg", alt="").user__pic
                 .user-about__title.subtitle 
                         | Кто я
                 .user-about__text
                     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         .about__right
-            svg(
-              viewbox="0 0 1000 100" 
-              preserveAspectRatio="none"
-              class="triangle triangle_fill_beige about__triangles")
-              polygon(points="0,100 1000,100 1000,0")
-                
                 .about-data
                     .about-data__desc.about-user-info
                         .about-data-info__title
@@ -88,5 +87,5 @@ block content
                         i.fa.fa-map-marker
                         | г. Москва
         
-    block footer
-        include ../common/_footer
+block footer
+    include ../common/_footer

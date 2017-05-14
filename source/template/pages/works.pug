@@ -4,15 +4,16 @@ block variables
     - var title = 'Мои Работы'
 
 block content
-    section.section.hero
+    
+    section.section.hero#hero
         block head-line
             include ../common/_header-line
         include ../common/_user
 
-        a(href="#").page-down
+        a(href="#works-head").page-down
             img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
 
-    section.section.works-head
+    section.section.works-head#works-head
         svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.works-head__fill.triangle_left
             polygon(points="0,0 0,110 1000, 110")
         svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.works-head__fill.triangle_right
@@ -23,59 +24,77 @@ block content
             | Мои работы     
         a(href="#").page-down
             img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
-    section.section.slider
-        .slider__desc
-            .slider__desc-info
-                .slider__desc-title
-                    .block-title Сайт школы онлайн образования
-                .slider__desc-skills
-                    | HTML, CSS, JavaScript
-                .slider__desc-btn
-                    a(href="#").btn Посмотреть сайт
-        .slider__display
-            img(src="img/works/work1.png" alt="").slider__display-pic
-        .slider__btns
-            a(href="#").slider__btn.slider__btn_left
-            a(href="#").slider__btn.slider__btn_right
-            
+
+
+
+    section.section.works#works
+        .works__content
+            .works__left
+                .works-slider__content
+                    .works-slider__content-wrapper
+                        .works-slider__display
+                            img(src="" alt="").works-slider__display-pic
+                        .works-slider__item-about
+                            .works__subtitle
+                                .subtitle
+                            .works__content-desc
+                            .works__content-btn
+                                a(href="#").works__content-view
+                                    i.fa.works__content-view-icon.fa-link Посмотреть сайт
+            .works__right
+                .works-slider
+                    .works-slider__controls
+                        a(href="#").works-slider__control-btn.works-slider__control-btn_left
+                            ul.works-slider__control-list
+                                li(data-full="./img/content/slider/1.png" data-title="Агентство интернет решений ITLoft;" data-skills="html5, CSS3, javascript, php" data-link="#").works-slider__control-item
+                                    img(src="./img/content/slider/1.png").works-slider___control-img
+                                li(data-full="./img/content/slider/2.png" data-title="Школа онлай-образования LoftSchool " data-skills="html5, CSS3, javascript, php" data-link="#").works-slider__control-item
+                                    img(src="./img/content/slider/2.png").works-slider___control-img
+                                li(data-full="./img/content/slider/3.png" data-title="Портал обучающих уроков LoftBlog" data-skills="html5, CSS3, javascript, php" data-link="#").works-slider__control-item
+                                    img(src="./img/content/slider/3.png").works-slider___control-img
+                                li(data-full="./img/content/slider/4.png" data-title="Сайт Атма йога" data-skills="html5, CSS3, javascript, php" data-link="#").works-slider__control-item
+                                    img(src="./img/content/slider/4.png").works-slider___control-img
+                        a(href="#").works-slider__control-btn.works-slider__control-btn_right
+
     section.section.reviews
-        .title.works__section-reviews
-            | Что обо мне говорят
-        ul.reviews__list
-            li.reviews__item
-                .blockquote
-                    i(aria-hidden="true").fa.fa-quote-left
-                .reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                .rev-user
-                    .rev-user__avatar
-                        img(src="img/avatars/Dima.jpg").rev-user__avatar_pic
-                    .rev-user__name 
-                        p Ковальчук Дмитрий
-                        p Основатель Loftschool
-            li.reviews__item
-                .blockquote
-                    i(aria-hidden="true").fa.fa-quote-left
-                .reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-                .rev-user
-                    .rev-user__avatar
-                        img(src="img/avatars/Vova.jpg").rev-user__avatar_pic
-                    .rev-user__name
-                        p Сабанцев Владимир
-                        p Преподаватель             
-        .form__container
-            form.form
-                .form__bg
-                .form_content
-                    .block-title.reviews__section-title Связаться со мной
+        .head-title
+            h1.head-title__text.lines Что обо мне говорят
+            svg.head-title__img
+                use(xlink:href="/img/icons/icon/about_header1.svg#head-title")        
+    
+        .reviews-content 
+            .review
+                blockquote.reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviews__autor
+                    .avatar
+                        img(src="img/avatars/Dima.jpg")
+                    .autor
+                        p.autor__name Ковальчук Дмитрий
+                        p.autr__desc Основатель Loftschool
+            .review
+                blockquote.reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+                .reviews__autor
+                    .avatar
+                        img(src="img/avatars/Vova.jpg")
+                    .autor
+                        p.autor__name Сабанцев Владимир
+                        p.autr__desc Преподаватель    
 
-                    input(type="text" name="name" placeholder="Имя").input
-
-                    input(type="email" name="email" placeholder="Email").input
-
-                    textarea(name="mail" placeholder="Ваше сообщение").input.input-area
-                .form-buttons
-                    input(type="submit" value="Отправить").form-btn.form-btn_left
-                    input(type="reset" value="Очистить").form-btn.form-btn.right
-        svg.triangle.triangle_fill_beige
-    block footer
+        .contact-form
+            form.contact
+                .contact-form__bg
+                .contact-form__content
+                    h3.contact-form__title.lines Связаться со мной
+                    input(type="text" name="name" placeholder="Имя").contact-form-input
+                    .tooltip.hide Имя должно быть длиннее 2х символов и не содержать спец символов
+                    input(type="email" name="email" placeholder="Email").contact-form-input
+                    .tooltip.hide Email имеет неверный формат. Например: ex@mp.le
+                    textarea(name="mail" placeholder="Ваше сообщение").contact-form-input.contact-form-input_textarea
+                    .tooltip.hide Ваше сообщение должно быть не короче 10 символов
+                ul.form-buttons
+                    li.form-buttons__button.form-buttons__button_even
+                        button.form-buttons__button-content#form-submit Отправить
+                    li.form-buttons__button.form-buttons__button_even
+                        button.form-buttons__button-content#form-clear Очистить
+        
         include ../common/_footer

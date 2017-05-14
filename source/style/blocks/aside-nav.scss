@@ -1,15 +1,81 @@
+.aside-nav,
+.blog-container {
+    float: left;
+    padding: 80px 40px;
+}
+
 .aside-nav {
     text-align: right;
-    width: 270px;
-    min-width: 270px;
-    margin-top: 65px;
-    position: fixed;
-    left: 125px;
-    top: 100px;
+    width: 30%;
+
+    @include tablets() {
+        position: fixed;
+        float: none;
+        top: 0;
+        left: -80%;
+        bottom: 0;
+        z-index: 10;
+        width: 80%;
+        height: 100%;
+        background-color: #00bfa5;
+        transition: all .3s;
+    }
+
+    &.active{
+        left: 0;
+    }
+
+}
+
+.blog-navigation__wrapper {
+
+    @include tablets() {
+        position: relative;
+        height: 100%;
+    }
+}
+
+.blog-navigation {
+    display: none;
+
+    @include tablets() {
+        display: block;
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        height: 100px;
+        width: 100px;
+        margin-top: -60px;
+        border-radius: 50%;
+        background-color: $main--lighten;
+    }
+
+    .fa {
+        position: absolute;
+        color: #fff;
+        opacity: .7;
+        top: 50%;
+        right: 10%;
+        line-height: 1;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: 1.25em;
+        transition: transform .3s;
+        transition: transform .3s,-webkit-transform .3s;
+    }
+
+    &:hover .fa{
+        opacity: 1;
+    }
+}
+
+.active .blog-navigation .fa {
+    transform: translateY(-50%) rotateY(180deg);
 }
 
 .aside-nav__item {
-
     margin-bottom: 25px;
 }
 
@@ -20,11 +86,22 @@
     font-family: 'roboto';
     font-weight: 400;
     display: block;
-    flex: 1;
     padding: 14px;
+    transition: all .3s;
+
+    @include tablets() {
+        color: rgba(255,255,255,.7);
+        padding: 10px 0;
+        border: none;
+    }
 }
 
 .aside-nav__link_active {
     border-right-color: $main--lighten;
     color: $main--lighten;
+
+    @include tablets() {
+        color: #fff;
+    }
+
 }

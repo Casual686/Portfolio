@@ -26,6 +26,19 @@
 	}
 }
 
+@mixin display() {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin laptop() {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+
 @mixin tablets() {
 	@media screen and (max-width: 768px) {
 		@content;

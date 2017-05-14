@@ -41,11 +41,24 @@
   &_fill {
 
     &_white {
-      fill: $white;
+    	fill: $white;
+		position: absolute;
+		width: 53%;
+		top: 90vh;
+
     }
 
     &_beige {
       fill: $beige;
+	  position: absolute;
+	  width: 53%;
+	  top: 90vh;
+	  right: 0;
+
+	  @include tablets() {
+          	fill: $white;
+      }
+
     }
 
   }

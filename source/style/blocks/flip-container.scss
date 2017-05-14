@@ -4,6 +4,9 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+
+
 }
 
 
@@ -15,6 +18,21 @@
 .flip-container, .front, .back {
 	width: 380px;
     height: 395px;
+
+	@include tablets() {
+        width: 360px;
+    }
+
+	@include phones() {
+		width: 100%;
+	}
+
+}
+
+.flip-container {
+	@include phones() {
+		width: 90%;
+	}
 }
 
 /* flip speed goes here */
@@ -64,6 +82,10 @@
 	font-weight: 500;
 	color: $main--dark;
 	font-size: 28px;
+
+	@include phones() {
+		font-size: 21px;
+	}
 }
 
 .user__desc_welcom {
@@ -71,6 +93,10 @@
 	font-weight: 400;
 	color: $main--dark;
 	margin-bottom: 34px;
+
+	@include phones() {
+		font-size: 14px;
+	}
 }
 
 .social__list_welcome {
@@ -93,6 +119,10 @@
 .auth__btns {
 	display: inline-flex;
 	width: 100%;
+	position: absolute;
+    left: 0;
+    top: 100%;
+    transform: translateY(-100%);
 }
 
 .auth__btn {
@@ -271,10 +301,19 @@
 
 .copyright_welcome {
 	position: absolute;
-    bottom: 0;
+    bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
+	color: #fff;
+    text-align: center;
+
+	@include phones() {
+		width: 90%;
+		font-size: 14px;
+	}
 }
+
+
 .autorization {
 	display: block;
 	position: absolute;
@@ -287,6 +326,15 @@
 	border-radius: 5px;
 	top: 24px;
 	right: 100px;
+
+	@include laptop() {
+		right: 24px;
+	}
+
+	@include phones() {
+		right: 50%;
+		transform: translateX(50%);
+	}
 
 	&:hover {
 		background-color: #fff;

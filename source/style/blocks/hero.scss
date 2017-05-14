@@ -8,7 +8,7 @@
 .hero__bg {
 	top: 0;
 	width: 100%;
-	@include centered(x);
+	left: 0;
 }
 
 .hero__pic {
@@ -16,7 +16,10 @@
     height: 314px;
     fill: rgba(#ffffff, .06);
     position: absolute;
-    top: -30%;
+}
+
+.user__pic-container .hero__pic {
+	top: -30%;
 }
 
 .hero__container {

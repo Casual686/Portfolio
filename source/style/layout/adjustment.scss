@@ -13,12 +13,20 @@ body {
 	color: $main--dark;
 	-webkit-font-smoothing: antialiased;
 
+	@include tablets() {
+		font-size: 14px;
+    }
+
 }
 
 .wrapper {
 	min-height: 100%;
 	position: relative;
 	overflow: hidden;
+
+	@include phones() {
+        min-width: 302px;
+    }
 }
 
 ul {
@@ -39,6 +47,13 @@ h5,
 h6 {
 	margin: 0;
 	font-weight: normal;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: 0 0;
+    cursor: pointer;
 }
 
 * {

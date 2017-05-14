@@ -1,10 +1,19 @@
 footer.footer
-    .footer__top
-        block navigationEndSocial
-            include ../common/_navigation
-            include ../common/_social-round        
-    .footer__bottom
-        .about-text
-            | Я веб разработчик из Москвы, и этот сайт я сделал в рамках обучения в школе онлайн образования Loftscool.
-        .copyright
-            | &copy; Шелгунов Александр | Создано с любовью в Loftscool | 2017
+    button.go-up
+        img(src="img/icons/icon/arrow_down.svg", alt="").go-up-icon
+    .footer__wrapper
+        .footer__row
+            .footer__column.footer__column_left
+                a(href="works.html").footer__link.preload-link Мои работы
+                a(href="blog.html").footer__link.preload-link Блог
+                a(href="about.html").footer__link.preload-link Обо мне
+                a(href="/").footer__link.preload-link Авторизация
+            .footer__column.footer__column_right
+                include ../common/_social-round     
+                
+        .footer__row
+            .footer__column.footer__column_left
+                span.footer__quote Я веб разработчик из Москвы, и этот сайт я сделал в рамках обучения в школе онлайн образования Loftscool.
+            .footer__column.footer__column_right
+                span.copyright.footer__copyright
+                    | &copy; Шелгунов Александр | Создано с любовью в Loftscool | 2017
