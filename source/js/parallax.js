@@ -64,7 +64,8 @@ var verticalParallax = (function () {
 window.onscroll = function () {
     var wScroll =window.pageYOffset;
 
-    verticalParallax.init(wScroll);
+       verticalParallax.init(wScroll);
+
 
 
 }

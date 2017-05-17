@@ -10,7 +10,7 @@ block content
             include ../common/_header-line
         include ../common/_user
 
-        a(href="#works-head").page-down
+        a(href="#" data-link="#works").page-down
             img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
 
     section.section.works-head#works-head
@@ -22,9 +22,7 @@ block content
             svg.works-head__pic
                 use(xlink:href="img/icons/icon/works_header.svg#works-head")
             | Мои работы     
-        a(href="#").page-down
-            img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
-
+        
 
 
     section.section.works#works

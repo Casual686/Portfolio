@@ -1,5 +1,5 @@
 .works-head,
-.about-head,
+.about,
 .blog-head {
 	position: relative;
 }
@@ -31,35 +31,9 @@
 	right: 0;
 }
 
-
-
-
-.triangle {
-  height: 100px;
-  width: 100%;
-
-  &_fill {
-
-    &_white {
-    	fill: $white;
-		position: absolute;
-		width: 53%;
-		top: 90vh;
-
-    }
-
-    &_beige {
-      fill: $beige;
-	  position: absolute;
-	  width: 53%;
-	  top: 90vh;
-	  right: 0;
-
-	  @include tablets() {
-          	fill: $white;
-      }
-
-    }
-
-  }
+.about__fill_left {
+	fill: $white;
+}
+.about__fill_right {
+	fill: $beige;
 }

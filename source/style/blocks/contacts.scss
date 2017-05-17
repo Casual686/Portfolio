@@ -1,21 +1,35 @@
 .map {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
+
+#map {
+    height: 100vh;
+}
+
+
 .contacts {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     background-color: rgba(252, 252, 252, .85);
     border-radius: 5px;
     height: 290px;
     width: 380px;
+    z-index: 5;
+    text-align: center;
+    @include  centered();
+
+    @include phones() {
+        transform: initial;
+        top: 0;
+        left: 0;
+        height: 250px;
+    }
 }
 
 .contacts .contacts_title {
     margin-bottom: 30px;
+    @include phones() {
+        margin-bottom: 18px;
+        margin-left: 0;
+    }
 }
 
 .contacts__list {

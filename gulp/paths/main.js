@@ -8,5 +8,7 @@ module.exports = [
   './source/js/animatetext.js',
   './source/js/slider.js',
   './source/js/blur.js',
-  './source/js/blog-menu.js'
+  './source/js/blog-menu.js',
+  './source/js/map.js',
+  './source/js/page-move.js'
 ];

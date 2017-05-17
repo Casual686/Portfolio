@@ -3,34 +3,23 @@ extends ../_template
 block variables
   - var title = 'About'
 
+block scripts
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiS9glPVYy5i8HRiT_BvERYu16jf5AUhg&callback=initMap" async defer)
+
 block content
-    section.section.hero
+    section.section.hero#hero
         block head-line
             include ../common/_header-line
-        .hero__bg
-            img(src="img/bg/portfolio.jpg").hero__bg-img
- 
-        .hero__container
-            .user
-                .user__pic-container
-                    img(src="img/avatars/me1.jpg" alt="").user__pic
-                .user__name Шелгунов Александр
-                .user__desc Личный сайт разработчика
-                    
-        a(href="#").page-down
+        include ../common/_user
+    
+        a(href="#" data-link="#abour").page-down
             img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
-                    
-    section.section.about
-        svg(
-            viewbox="0 0 1000 100" 
-            preserveAspectRatio="none"
-            class="triangle triangle_fill_white about__triangles")
-            polygon(points="0,0 0,100 1000,100")
-        svg(
-          viewbox="0 0 1000 100" 
-          preserveAspectRatio="none"
-          class="triangle triangle_fill_beige about__triangles")
-          polygon(points="0,100 1000,100 1000,0")
+
+    section.section.about#abour
+        svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.about__fill_left.triangle_left
+            polygon(points="0,0 0,110 1000, 110")
+        svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.about__fill_right.triangle_right
+            polygon(points="0,110 1000,110 1000,0")   
               
         .about__left
             .title.about__section-title
@@ -66,7 +55,7 @@ block content
                                                                 <circle r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-15"/> 
                                                             .skill__name=  skillTitle
     section.section.map
-        .map__map
+        .map__map#map
         .contacts
             .subtitle.contacts_title Контакты
             ul.contacts__list
@@ -87,5 +76,20 @@ block content
                         i.fa.fa-map-marker
                         | г. Москва
         
-block footer
-    include ../common/_footer
+    footer.footer
+        .footer__wrapper
+            .footer__row
+                .footer__column.footer__column_left
+                    a(href="works.html").footer__link.preload-link Мои работы
+                    a(href="blog.html").footer__link.preload-link Блог
+                    a(href="about.html").footer__link.preload-link Обо мне
+                    a(href="/").footer__link.preload-link Авторизация
+                .footer__column.footer__column_right
+                    include ../common/_social-round     
+                    
+            .footer__row
+                .footer__column.footer__column_left
+                    span.footer__quote Я веб разработчик из Москвы, и этот сайт я сделал в рамках обучения в школе онлайн образования Loftscool.
+                .footer__column.footer__column_right
+                    span.copyright.footer__copyright
+                        | &copy; Шелгунов Александр | Создано с любовью в Loftscool | 2017

@@ -40,6 +40,10 @@
     font-family: 'bernier_regularregular';
     font-weight: 400;
     text-align: center;
+
+    @include laptop() {
+        font-size: 35px;
+      }
   }
   ul {
     list-style: none;

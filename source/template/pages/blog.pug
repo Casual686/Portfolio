@@ -22,20 +22,24 @@ block content
                     use(xlink:href="img/icons/icon/blog_header0.svg#blog-head")
                 | Блог     
             
+        a(href="#"  data-link="#blog").page-down
+            img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
+                    
+                    
     section.section.blog-head 
         svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.blog-head__fill.triangle_left
             polygon(points="0,0 0,110 1000, 110")
         svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.blog-head__fill.triangle_right
             polygon(points="0,110 1000,110 1000,0")
                         
-    section.section.blog
+    section.section.blog#blog
         aside.aside-nav
             button.blog-navigation
                 span.fa.fa-chevron-right
             nav.blog-navigation__wrapper
                 ul.aside-nav__list
-                    li.aside-nav__item
-                        a(href="#article-1").aside-nav__link.aside-nav__link_active
+                    li.aside-nav__item.active
+                        a(href="#article-1").aside-nav__link
                             | Самое важное в SASS
                     li.aside-nav__item
                         a(href="#article-2").aside-nav__link
