@@ -1,0 +1,31 @@
+.block-title {
+	font-size: 35px;
+	padding: 0 40px;
+	display: inline-block;
+	font-family: 'bernier_regularregular';
+	color: $main--dark;
+	position: relative;
+	text-transform: uppercase;
+	max-width: 395px;
+	text-align: center;
+
+	&:after, &:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0.71em;
+		transform: translateY(-50%);
+		background: #cacbc8;
+		width: 22px;
+		height: 5px;
+
+	}
+
+	&:before {
+		left: 0;
+	}
+
+	&:after {
+		right: 0;
+	}
+}

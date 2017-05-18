@@ -1,7 +1,56 @@
 extends ../_template
 
 block variables
-  - var title = 'Home page'
+    - var title = 'Home page'
+
+    
 
 block content
-  include ../common/_greating
+    include ../common/_parallax
+    a(href="#" alt="" onclick="document.querySelector('#flip-toggle').classList.toggle('hover'); document.querySelector('#autorization').classList.toggle('btn-click');").autorization#autorization Авторизоваться
+    
+
+    .flip-container#flip-toggle
+        .flipper
+            .front
+                .user__pic-container_welcome
+                    img(src="img/avatars/me1.jpg" alt="").user__pic
+                .user__name_welcom Шелгунов Александр
+                .user__desc_welcom Личный сайт разработчика
+                ul.social__list_welcome
+                  each icon in ['vk', 'github', 'in']
+                    li.social__item_welcome
+                        a(href="#").social__link
+                            svg.social__icon_welcome
+                                use(xlink:href=`img/icons/sprite/sprite-socials.svg#${icon}`)
+                .auth__btns
+                  a(href="works.html").auth__btn Мои работы
+                  a(href="about.html").auth__btn Обо мне
+                  a(href="blog.html").auth__btn Блог
+            .back
+                .subtitle.subtitle_auth
+                    | Авторизуйтесь
+                .logon-input
+                    .logon-input__block
+                        span.logon-input__icon.fa.fa-user
+                    input(type="text" name="user" placeholder="Логин").logon-input_area.inputs
+                .logon-input
+                    .logon-input__block
+                        span.logon-input__icon.fa.fa-key
+                    input(type="password" name="password" placeholder="Пароль").logon-input_area.inputs
+                .logon-check
+                    input(type="checkbox").checkbox#checkbox
+                    label(for="checkbox").check-title Я человек
+                .question
+                    | Вы точно не робот?
+                .logon-radio
+                    input(type="radio" name="robot").radio#radio1
+                    label(for="radio1").radio__title Да
+                    input(type="radio" name="robot").radio#radio2
+                    label(for="radio2").radio__title Не уверен
+                .auth__btns
+                  a(href="#" onclick="document.querySelector('#flip-toggle').classList.toggle('hover'); document.querySelector('#autorization').classList.toggle('btn-click');").auth__btn На главную
+                  a(href="#").auth__btn Войти
+    .copyright.copyright_welcome
+        | &copy; Шелгунов Александр | Создано с любовью в Loftscool | 2017
+        

@@ -1,0 +1,43 @@
+.title {
+    color: $main-font-color;
+    font-size: 63px;
+    font-family: 'bernier_regularregular';
+    padding: 2.8125rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+
+  &:after, &:before {
+    content: "";
+    display: block;
+    background: rgba($main-font-color, .2);
+    width: 22px;
+    height: 5px;
+  }
+
+  &:after {
+    margin-left: 20px;
+  }
+
+  &:before {
+    margin-right: 20px;
+  }
+
+  @include laptop() {
+      padding: 0 0 60px 0;
+    }
+
+    @include phones() {
+        font-size: 35px;
+    }
+}
+
+#white {
+    &:after, &:before {
+      background: rgba(#fff, .2);
+    }
+}

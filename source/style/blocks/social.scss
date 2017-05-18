@@ -1,0 +1,33 @@
+.head-line {
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+
+.sicial {
+    position: relative;
+    z-index: 10;
+}
+.social__list {
+    display: inline-flex;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.social__item {
+    margin-right: 25px;
+}
+
+.social__link {
+    display: block;
+}
+
+.social__icon {
+    height: 25px;
+    width: 25px;
+    fill: rgba(#ffffff, .5);
+
+    &:hover {
+        fill: rgba(#ffffff, 1);
+    }
+}

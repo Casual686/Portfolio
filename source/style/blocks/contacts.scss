@@ -1,0 +1,57 @@
+.map {
+    position: relative;
+}
+
+#map {
+    height: 100vh;
+}
+
+
+.contacts {
+    background-color: rgba(252, 252, 252, .85);
+    border-radius: 5px;
+    height: 290px;
+    width: 380px;
+    z-index: 5;
+    text-align: center;
+    @include  centered();
+
+    @include phones() {
+        transform: initial;
+        top: 0;
+        left: 0;
+        height: 250px;
+    }
+}
+
+.contacts .contacts_title {
+    margin-bottom: 30px;
+    @include phones() {
+        margin-bottom: 18px;
+        margin-left: 0;
+    }
+}
+
+.contacts__list {
+    margin-left: 40px;
+}
+
+.contacts__item {
+    margin-bottom: 25px;
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'roboto';
+    font-weight: 500;
+    color: $main--dark;
+    font-size: 16px;
+
+    i {
+        color: $main--lighten;
+        font-size: 25px;
+        margin-right: 10px;
+    }
+}

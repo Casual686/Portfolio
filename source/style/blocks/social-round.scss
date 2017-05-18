@@ -1,0 +1,30 @@
+.social-round {
+    margin-left: auto;
+    margin-right: 30px;
+
+    @include tablets() {
+        margin: 0 0 20px 0;
+    }
+
+}
+.social-round__list {
+    display: inline-flex;
+}
+
+.social-round__item {
+    margin-left: 10px;
+}
+
+.social-round__link {
+    display: block;
+}
+
+.social-round__icon {
+    height: 36px;
+    width: 36px;
+    fill: rgba(#ffffff, .5);
+
+    &:hover {
+        fill: rgba(#ffffff, 1);
+    }
+}

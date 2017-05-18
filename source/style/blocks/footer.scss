@@ -1,0 +1,110 @@
+.footer {
+	position: relative;
+}
+
+.go-up {
+    display: block;
+    position: relative;
+    margin: 70px auto;
+    width: 50px;
+    height: 50px;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+
+	@include phones() {
+        margin: 35px auto;
+    }
+}
+
+.go-down,
+.go-up {
+    color: #fff;
+    opacity: .7;
+    transition: all .3s;
+    padding: 0;
+}
+
+.fa-chevron-up:before {
+    content: "";
+}
+
+.footer__wrapper{
+	background-color: rgba(55,62,66,.85);
+	color: #fff;
+	text-align: center;
+
+	@include tablets() {
+        background-color: $main--darken;
+    }
+}
+
+.footer__row {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding: 30px;
+
+	&:last-child {
+    	border: none;
+	}
+
+	&::after {
+		content: "";
+    	display: table;
+		clear: both;
+	}
+}
+
+.footer__column_left {
+    text-align: left;
+    padding-right: 10px;
+
+	@include phones() {
+		padding-right: 0;
+	}
+}
+
+.footer__column_right {
+    text-align: right;
+    padding-left: 10px;
+}
+
+.footer__column {
+    float: left;
+    width: 50%;
+
+	@include tablets() {
+		margin-bottom: 20px;
+	    float: none;
+	    width: 100%;
+	    text-align: center;
+    }
+}
+
+.footer__link:first-child {
+    margin-left: 0;
+}
+
+.footer__link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 0;
+    vertical-align: middle;
+    display: inline-block;
+
+	@include laptop() {
+		margin: 0 6px;
+    	font-size: .875em;
+    }
+	@include phones() {
+		font-size: 13px;
+	}
+
+}
+
+.footer__quote,
+.footer__copyright {
+    opacity: .5;
+    font-family: 'roboto';
+	font-weight: 300;
+}

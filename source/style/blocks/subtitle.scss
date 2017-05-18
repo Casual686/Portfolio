@@ -1,0 +1,36 @@
+.subtitle {
+    font-size: 2.1875rem;
+    color: $main--dark;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    font-family: 'bernier_regularregular';
+    max-width: 14.375rem;
+    text-align: center;
+    margin-left: 2.8125rem;
+    margin-right: 2.8125rem;
+    margin-bottom: 2.5rem;
+
+    &::after,
+    &::before {
+        content: "";
+        width: 22px;
+        height: 5px;
+        opacity: 0.2;
+        background-color: rgba($main-font-color, .2);
+        top: 1.3125rem;
+        display: block;
+        position: absolute;
+    }
+
+    &::before {
+        left: -2.625rem;
+    }
+    &::after {
+        right: -2.625rem;
+    }
+
+    @include tablets() {
+        max-width: 90%;
+    }
+}

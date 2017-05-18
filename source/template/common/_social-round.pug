@@ -1,0 +1,6 @@
+ul.social-round__list
+    each item in ['vk_round', 'github_round', 'in_round']
+        li.social-round__item
+            a(href="#" class=`social__link .social-round__link_${item}`)
+                svg.social-round__icon
+                    use(xlink:href=`/img/icons/sprite/sprite-sicial-round.svg#${item}`)

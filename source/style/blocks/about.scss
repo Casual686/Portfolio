@@ -1,0 +1,78 @@
+.about {
+    display: flex;
+    @include tablets() {
+    	flex-direction: column;
+    }
+}
+
+.about__left, .about__right {
+    position: relative;
+    display: flex;
+    flex: 1;
+    min-width: 50%;
+
+    @include laptop() {
+    	flex-direction: column;
+    }
+}
+
+.about__left {
+    background: $white;
+    align-items: flex-start;
+}
+
+.user-about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 20px;
+
+    @include laptop() {
+		padding: 0 80px;
+	}
+
+    @include phones() {
+        padding: 0 10px;
+    }
+}
+
+.about__section-title {
+    flex: 1;
+
+    @include laptop() {
+    	flex: initial;
+        width: 100%;
+    }
+}
+
+.user-about__text p{
+    margin-bottom: 20px;
+}
+
+.about__right {
+    background: $beige;
+}
+
+.about__triangles {
+    position: absolute;
+    bottom: 100%;
+}
+
+.about-data {
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px;
+
+    @include laptop() {
+        padding: 0 25px 0 35px;
+    }
+
+    @include phones() {
+        padding: 0 10px;
+    }
+}
+
+.about-data-info__title {
+    text-align: center;
+}

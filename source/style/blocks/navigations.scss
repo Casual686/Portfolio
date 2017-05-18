@@ -1,0 +1,19 @@
+.nav-menu {
+    display: inline-flex;
+}
+
+.nav-menu__item {
+    margin-right: 8px;
+    padding: 25px 0 25px 30px;
+
+
+    @include phones() {
+        margin-right: 10px;
+        padding: 25px 0 16px;
+    }
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #ffffff;
+}

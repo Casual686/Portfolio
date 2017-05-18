@@ -1,0 +1,76 @@
+extends ../_template
+
+block variables
+    - var title = 'Blog'
+
+block content
+    section.section.hero#hero
+        block head-line
+            include ../common/_header-line
+        .hero__bg
+            img(src="img/bg/portfolio.jpg" alt="").hero__bg-img
+            
+        .hero__container
+            .user
+                .user__pic-container
+                    img(src="img/avatars/me1.jpg" alt="").user__pic
+                .user__name Шелгунов Александр
+                .user__desc Личный сайт разработчика
+                
+            .title.blog-head_title#white
+                svg.hero__pic#blog-head__pic
+                    use(xlink:href="img/icons/icon/blog_header0.svg#blog-head")
+                | Блог     
+            
+        a(href="#"  data-link="#blog").page-down
+            img(src="img/icons/icon/arrow_down.svg", alt="").page-down__icon
+                    
+                    
+    section.section.blog-head 
+        svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.blog-head__fill.triangle_left
+            polygon(points="0,0 0,110 1000, 110")
+        svg(viewbox="0 0 1000 110" preserveAspectRatio="none").triangle_position.blog-head__fill.triangle_right
+            polygon(points="0,110 1000,110 1000,0")
+                        
+    section.section.blog#blog
+        aside.aside-nav
+            button.blog-navigation
+                span.fa.fa-chevron-right
+            nav.blog-navigation__wrapper
+                ul.aside-nav__list
+                    li.aside-nav__item.active
+                        a(href="#article-1").aside-nav__link
+                            | Самое важное в SASS
+                    li.aside-nav__item
+                        a(href="#article-2").aside-nav__link
+                            | Прием в Верстке без которых не обходится ни один сайт
+                    li.aside-nav__item
+                        a(href="#article-3").aside-nav__link
+                            | Самый необходимый набор Gulp плагинов
+        
+        .blog-container            
+            .blog-content
+                article.article#article-1
+                    .article__title Самое важное в SASS
+                    .article__date 25.05.2017
+                    .article__content
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .blog-content
+                article.article#article-2
+                    .article__title Прием в Верстке без которых не обходится ни один сайт
+                    .article__date 25.05.2017
+                    .article__content
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .blog-content
+                article.article#article-3
+                    .article__title Самый необходимый набор Gulp плагинов
+                    .article__date 25.05.2017
+                    .article__content
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+block footer
+    include ../common/_footer   
+        

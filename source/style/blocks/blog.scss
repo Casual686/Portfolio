@@ -1,0 +1,71 @@
+#white {
+    color: #fff;
+}
+
+.blog {
+    margin-bottom: 65px;
+
+    &::before,
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
+.blog-container {
+    width: 70%;
+
+    @include tablets() {
+        width: 100%;
+    }
+}
+
+.blog-content:not(:last-child) {
+    &::after {
+        content: "";
+        display: block;
+        width: 70%;
+        height: 5px;
+        background-color: rgba($main--dark, .07);
+        margin-top: 70px;
+
+            @include laptop() {
+                width: 100%;
+            }
+    }
+
+}
+
+.article__title {
+    color: $main--dark;
+    font-size: 35px;
+    font-family: 'bernier_regularregular';
+    margin-bottom: 25px;
+    margin-top: 65px;
+
+    @include phones() {
+        font-size: 21px;
+    }
+}
+
+.article__date {
+    font-family: 'roboto';
+    font-weight: 400;
+    color: rgba($main--lighten, .7);
+    margin-bottom: 25px;
+    font-size: 16px;
+
+    @include phones() {
+        font-size: 14px;
+
+    }
+}
+
+.article__content p{
+    font-family: 'roboto';
+    font-size: 16px;
+    color: $main--dark;
+    margin-bottom: 20px;
+}
