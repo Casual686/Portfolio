@@ -10,5 +10,7 @@ module.exports = [
   './source/js/blur.js',
   './source/js/blog-menu.js',
   './source/js/map.js',
-  './source/js/page-move.js'
+  './source/js/page-move.js',
+  './source/js/validation.js',
+  './source/js/logon-val.js'
 ];

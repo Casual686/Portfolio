@@ -79,20 +79,25 @@ block content
                         p.autr__desc Преподаватель    
 
         .contact-form
-            form.contact
+            form(novalidate action="mail.php").contact
                 .contact-form__bg
                 .contact-form__content
                     h3.contact-form__title.lines Связаться со мной
-                    input(type="text" name="name" placeholder="Имя").contact-form-input
-                    .tooltip.hide Имя должно быть длиннее 2х символов и не содержать спец символов
+                    .tooltip.hide Не менее 5 символов и без спец символов
+                    input(type="text" name="name" placeholder="Имя").contact-form-input#name
+                    .tooltip.hide Пример: ex@mp.le
                     input(type="email" name="email" placeholder="Email").contact-form-input
-                    .tooltip.hide Email имеет неверный формат. Например: ex@mp.le
-                    textarea(name="mail" placeholder="Ваше сообщение").contact-form-input.contact-form-input_textarea
-                    .tooltip.hide Ваше сообщение должно быть не короче 10 символов
+                    .tooltip.hide Не менее 10 символов
+                    textarea(name="comment" placeholder="Ваше сообщение").contact-form-input.contact-form-input_textarea
                 ul.form-buttons
                     li.form-buttons__button.form-buttons__button_even
-                        button.form-buttons__button-content#form-submit Отправить
+                        button(type="submit").form-buttons__button-content#form-submit Отправить
                     li.form-buttons__button.form-buttons__button_even
-                        button.form-buttons__button-content#form-clear Очистить
+                        button(type="reset").form-buttons__button-content#form-clear Очистить
         
         include ../common/_footer
+    
+    
+        .modal-wrapper#modal
+            .modal Сообщение отправлено
+                a(href).modal-close#close X

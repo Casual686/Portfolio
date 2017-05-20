@@ -27,30 +27,31 @@ block content
                   a(href="works.html").auth__btn Мои работы
                   a(href="about.html").auth__btn Обо мне
                   a(href="blog.html").auth__btn Блог
-            .back
+            form.back#logon
                 .subtitle.subtitle_auth
                     | Авторизуйтесь
                 .logon-input
-                    .logon-input__block
-                        span.logon-input__icon.fa.fa-user
-                    input(type="text" name="user" placeholder="Логин").logon-input_area.inputs
+                    input(type="text" name="user" placeholder="Логин" data-check="username" data-checkempty="empty").logon-input_area.inputs
+                    span.logon-input__icon.fa.fa-user
                 .logon-input
-                    .logon-input__block
-                        span.logon-input__icon.fa.fa-key
-                    input(type="password" name="password" placeholder="Пароль").logon-input_area.inputs
+                    input(type="password" name="password" placeholder="Пароль" data-check="password").logon-input_area.inputs
+                    span.logon-input__icon.fa.fa-key
                 .logon-check
-                    input(type="checkbox").checkbox#checkbox
+                    input(type="checkbox" name="norobot").checkbox#checkbox
                     label(for="checkbox").check-title Я человек
                 .question
                     | Вы точно не робот?
                 .logon-radio
-                    input(type="radio" name="robot").radio#radio1
+                    input(type="radio" name="robot" value="Yes").radio#radio1
                     label(for="radio1").radio__title Да
-                    input(type="radio" name="robot").radio#radio2
+                    input(type="radio" name="robot" value="No").radio#radio2
                     label(for="radio2").radio__title Не уверен
                 .auth__btns
                   a(href="#" onclick="document.querySelector('#flip-toggle').classList.toggle('hover'); document.querySelector('#autorization').classList.toggle('btn-click');").auth__btn На главную
-                  a(href="#").auth__btn Войти
+                  a(href="#").auth__btn#enter Войти
     .copyright.copyright_welcome
         | &copy; Шелгунов Александр | Создано с любовью в Loftscool | 2017
-        
+
+    .modal-wrapper#modal
+        .modal Похоже вы робот
+            a(href).modal-close#close X
