@@ -1,21 +1,18 @@
 # Шелгунов Александр
 
-> This need gulp 4.0.
+>gulp 4.0 requires!
 
 #### install
 
-1. ```git clone git@github.com:Casual686/Gulp4Builder.git```
+1. ```git clone git@github.com:Casual686/Portfolio.git```
 > Rename folder
-2. ```mv Gulp4Builder/ project_name/```
-3. ```cd project_name/```
+2. ```cd Portfolio/```
 > Install last version Gulp CLI tools globally (Read more - [GitHub](https://github.com/gulpjs/gulp/blob/4.0/docs/getting-started.md) )
-4. ```npm install gulpjs/gulp-cli -g```  
+3. ```npm install gulpjs/gulp-cli -g```  
 > Install package
-5. ```npm install``` or ```yarn```
+4. ```npm install``` or  just ```yarn``` ;)
 > Run Gulp
-6. ```gulp```
+5. ```gulp```
 
 > Set you git repo for push
-7. ```git remote set-url origin git@github.com:username/my-builder.git```
-
-> Task sprites PNG and SVG is off  in default.
+6. ```git remote set-url origin git@github.com:username/project-name.git```
